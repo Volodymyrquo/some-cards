@@ -5,14 +5,14 @@ import s from './Header.module.css';
 const Header = () => {
   return (
     <div className={s.header}>
-      <ul>
-        <li>
+      <ul className={s.list}>
+        <li className={s.item}>
           <Link to='/dashboard'>Dashboard</Link>
         </li>
-        <li>
+        <li className={s.item}>
           <Link to='/users'>Users</Link>
         </li>
-        <li>
+        <li className={s.item}>
           <Link to='/login'>Login</Link>
         </li>
       </ul>

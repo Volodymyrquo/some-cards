@@ -10,13 +10,17 @@
   grid-area: h;
 }
 
-li {
+.list {
+  list-style: none;
+}
+
+.item {
   display: inline;
   font-size: 16px;
   margin-left: 16px;
 }
 
-a {
+.item a {
   color: #d3d3d3;
   text-decoration: none;
 }

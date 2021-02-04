@@ -4,9 +4,34 @@ import s from './Navbar.module.css';
 const Navbar = () => {
   return (
     <div className={s.nav}>
-      <ul>
-        <li>
-          <Link to='dashboard'>Dashboard</Link>
+      <div className={s.logo}></div>
+      <ul className={s.list}>
+        <li className={s.item}>
+          <Link to='/dashboard'>Dashboard</Link>
+        </li>
+        <li className={s.item}>
+          <Link to='/cardstypes'>Cards Types</Link>
+        </li>
+        <li className={s.item}>
+          <Link to='/cards'>Cards</Link>
+        </li>
+        <li className={s.item}>
+          <Link to='/contacts'>Contacts</Link>
+        </li>
+        <li className={s.item}>
+          <Link to='/currencies'>Currencies</Link>
+        </li>
+        <li className={s.item}>
+          <Link to='/operations'>Operations</Link>
+        </li>
+        <li className={s.item}>
+          <Link to='/requisites'>Requisites</Link>
+        </li>
+        <li className={s.item}>
+          <Link to='/tariffs'>Tariffs</Link>
+        </li>
+        <li className={s.item}>
+          <Link to='/users'>Users</Link>
         </li>
       </ul>
     </div>
