@@ -13,27 +13,7 @@ import Messanger from '../../images/sumra/Messanger.svg';
 import WhatsApp from '../../images/sumra/WhatsApp.svg';
 import Signal from '../../images/sumra/Signal.svg';
 
-type Props = {
-  /**
-   * Function to step on click.
-   */
-  onStep: Function,
-
-  /**
-   * className
-   */
-  className: String,
-};
-
-type State = {
-  /**
-   * Phone number
-   *
-   */
-  phone: string,
-};
-
-export class FirstForm extends Component<Props, State> {
+export class FirstForm extends Component {
   static defaultProps = {
     targetBlank: '_blank',
     socialLinkWidth: 46,
@@ -66,12 +46,6 @@ export class FirstForm extends Component<Props, State> {
     ],
   };
 
-  /**
-   * Initializes a new {@code FirstForm} instance.
-   *
-   * @param {Props} props - The React {@code Component} props to initialize
-   * the new {@code FirstForm} instance with.
-   */
   constructor(props) {
     super(props);
 
@@ -80,12 +54,6 @@ export class FirstForm extends Component<Props, State> {
     };
   }
 
-  /**
-   * Render
-   *
-   * @private
-   * @returns {void}
-   */
   render() {
     const { className, socialLinks, socialLinkWidth, targetBlank } = this.props;
 
@@ -156,13 +124,6 @@ export class FirstForm extends Component<Props, State> {
     );
   }
 
-  /**
-   * Set state after changed phone number.
-   *
-   * @param {String} phone - The HTML Event which details the form submission.
-   * @private
-   * @returns {void}
-   */
   _changePhoneNumber = (phone) => {
     this.setState({ phone });
   };
@@ -181,13 +142,6 @@ export class FirstForm extends Component<Props, State> {
     this.props.onStep(2);
   };
 
-  /**
-   * Submit form value (phone number).
-   *
-   * @param {Event} event - The HTML Event which details the form submission.
-   * @private
-   * @returns {void}
-   */
   _submitPhoneNumber = (event) => {
     event.preventDefault();
 

@@ -1,21 +1,6 @@
 import React, { Component, createRef } from 'react';
 import ReactCodeInput from 'react-verification-code-input';
 import logout from '../../images/sumra/icon-logout.svg';
-type Props = {
-  /**
-   * Function to step on click.
-   */
-  onStep: Function,
-
-  /**
-   * Function set Verification code to upper state
-   */
-  onSetCode: Function,
-};
-
-type State = {
-  verificationCode: String,
-};
 
 export class ConfirmForm extends Component<Props, State> {
   static defaultProps = {
@@ -26,12 +11,6 @@ export class ConfirmForm extends Component<Props, State> {
     fields: 6,
   };
 
-  /**
-   * Initializes a new {@code ConfirmForm} instance.
-   *
-   * @param {Props} props - The React {@code Component} props to initialize
-   * the new {@code ConfirmForm} instance with.
-   */
   constructor(props) {
     super(props);
 
@@ -42,12 +21,6 @@ export class ConfirmForm extends Component<Props, State> {
     this.input = createRef();
   }
 
-  /**
-   * Render
-   *
-   * @private
-   * @returns {void}
-   */
   render() {
     const { type, fieldWidth, fieldHeight, fields } = this.props;
 
@@ -89,13 +62,6 @@ export class ConfirmForm extends Component<Props, State> {
     );
   }
 
-  /**
-   * Submit verification code.
-   *
-   * @param {Event} event - The HTML Event which details the form submission.
-   * @protected
-   * @returns {void}
-   */
   _submitVerificationCode = (event) => {
     event.preventDefault();
 

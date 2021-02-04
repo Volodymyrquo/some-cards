@@ -13,7 +13,7 @@ export const END_POINTS = {
  * makeId.
  */
 
-export function makeid(length: number): string {
+export function makeid(length) {
   var result = '';
   var characters =
     'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -25,39 +25,9 @@ export function makeid(length: number): string {
 }
 
 /**
- * type Data
- */
-type Data = {
-  /**
-   * Phone number.
-   */
-  phone_number?: string,
-
-  /**
-   * Device identyficator.
-   */
-  device_id: string,
-
-  /**
-   * User name.
-   */
-  username: string,
-
-  /**
-   * Verification code.
-   */
-  code: string,
-
-  /**
-   * Password.
-   */
-  password: string,
-};
-
-/**
  * makeFetch.
  */
-export async function makeFetch(action, data /* : Data */): Promise<*> {
+export async function makeFetch(action, data) {
   return fetch(END_POINTS.SERVER + action, {
     body: JSON.stringify(data),
     method: 'POST',
@@ -70,7 +40,7 @@ export async function makeFetch(action, data /* : Data */): Promise<*> {
 /**
  * makeFetch.
  */
-export function fetchValidateName(name): Promise<*> {
+export function fetchValidateName(name) {
   return fetch(END_POINTS.SERVER + END_POINTS.VALIDATE + '?username=' + name);
 }
 
