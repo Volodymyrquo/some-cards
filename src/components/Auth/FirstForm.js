@@ -1,17 +1,17 @@
 import React, { Component, useState } from 'react';
-import { makeid, makeFetch, END_POINTS } from '../common/functions';
+import { makeid, makeFetch, END_POINTS } from '../../common/functions';
 import { isMobile, isBrowser } from 'react-device-detect';
 import 'react-phone-number-input/style.css';
 import PhoneInput from 'react-phone-number-input';
 import flags from 'react-phone-number-input/flags';
-import send from '../images/sumra/send.svg';
-import user from '../images/sumra/user.svg';
-import benefits from '../images/sumra/Benefits_draft.svg';
-import Telegram from '../images/sumra/Telegram.svg';
-import Viber from '../images/sumra/Viber.svg';
-import Messanger from '../images/sumra/Messanger.svg';
-import WhatsApp from '../images/sumra/WhatsApp.svg';
-import Signal from '../images/sumra/Signal.svg';
+import send from '../../images/sumra/send.svg';
+import user from '../../images/sumra/user.svg';
+import benefits from '../../images/sumra/Benefits_draft.svg';
+import Telegram from '../../images/sumra/Telegram.svg';
+import Viber from '../../images/sumra/Viber.svg';
+import Messanger from '../../images/sumra/Messanger.svg';
+import WhatsApp from '../../images/sumra/WhatsApp.svg';
+import Signal from '../../images/sumra/Signal.svg';
 
 type Props = {
   /**

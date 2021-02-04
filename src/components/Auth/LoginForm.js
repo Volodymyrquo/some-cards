@@ -1,46 +1,12 @@
 import React, { Component } from 'react';
-import { makeFetch, fetchAuth, END_POINTS } from '../common/functions';
-import person from '../images/sumra/icon-person.svg';
-import lock from '../images/sumra/icon-lock.svg';
-import logout from '../images/sumra/icon-logout.svg';
+import person from '../../images/sumra/icon-person.svg';
+import lock from '../../images/sumra/icon-lock.svg';
+import logout from '../../images/sumra/icon-logout.svg';
 import { connect } from 'react-redux';
-import { _signIn } from '../redux/auth-reducer';
+import { _signIn } from '../../redux/auth-reducer';
 
-/**
- * type State
- */
-type Props = {
-  /**
-   * Function change step authentification
-   */
-  onStep: Function,
-};
-
-/**
- * type State
- */
-type State = {
-  /**
-   * User name
-   */
-  username: String,
-
-  /**
-   * Password
-   */
-  password: String,
-};
-
-/**
- * The Login form  rendering the login page.
- *
- * @extends Component
- */
 class LoginForm extends Component<Props, State> {
-  /**
-   * constructor
-   */
-  constructor(props: Props) {
+  constructor(props) {
     super(props);
 
     this.state = {
@@ -49,9 +15,6 @@ class LoginForm extends Component<Props, State> {
     };
   }
 
-  /**
-   * render
-   */
   render() {
     let { className } = this.props;
     className += ' login-form';
@@ -110,37 +73,15 @@ class LoginForm extends Component<Props, State> {
     );
   }
 
-  /**
-   * Handler input user name
-   *
-   * @param {Event} event - The HTML Event which details the form submission.
-   * @private
-   * @returns {void}
-   */
   _changeUserName = (event) => {
     this.setState({ username: event.target.value });
   };
 
-  /**
-   * Handler input password
-   *
-   * @param {Event} event - The HTML Event which details the form submission.
-   * @private
-   * @returns {void}
-   */
   _changePassword = (event) => {
     this.setState({ password: event.target.value });
   };
 
-  /**
-   * Prevents submission of the form and sign up user.
-   *
-   * @param {Event} event - The HTML Event which details the form submission.
-   * @private
-   * @returns {void}
-   */
   _onFormSubmit = (event) => {
-    debugger;
     event.preventDefault();
 
     if (this.state.username && this.state.password) {
@@ -150,11 +91,6 @@ class LoginForm extends Component<Props, State> {
     }
   };
 
-  /**
-   * Create user
-   * @private
-   * @returns {void}
-   */
   /*   _signIn = () => {
     const { username, password } = this.state;
 

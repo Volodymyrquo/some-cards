@@ -1,6 +1,6 @@
 import React, { Component, createRef } from 'react';
 import ReactCodeInput from 'react-verification-code-input';
-import logout from '../images/sumra/icon-logout.svg';
+import logout from '../../images/sumra/icon-logout.svg';
 type Props = {
   /**
    * Function to step on click.

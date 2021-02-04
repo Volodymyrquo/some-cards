@@ -1,42 +1,16 @@
 import React, { Component } from 'react';
-import { END_POINTS, fetchValidateName, makeFetch } from '../common/functions';
-import iconEnter from '../images/sumra/icon-enter.svg';
-import personIcon from '../images/sumra/icon-person.svg';
-import personOrange from '../images/sumra/icon-person-orange.svg';
-import iconBlock from '../images/sumra/icon-block.svg';
-import checkGreen from '../images/sumra/icon-check-green.svg';
+import {
+  END_POINTS,
+  fetchValidateName,
+  makeFetch,
+} from '../../common/functions';
+import iconEnter from '../../images/sumra/icon-enter.svg';
+import personIcon from '../../images/sumra/icon-person.svg';
+import personOrange from '../../images/sumra/icon-person-orange.svg';
+import iconBlock from '../../images/sumra/icon-block.svg';
+import checkGreen from '../../images/sumra/icon-check-green.svg';
 
-type Props = {
-  /**
-   * Function to step on click.
-   */
-  onStep: Function,
-};
-
-type State = {
-  /**
-   * Verification code.
-   */
-  verificationCode: String[],
-
-  /**
-   * User name check validate
-   */
-  invalidUserName: Boolean,
-
-  /**
-   * User name
-   */
-  username: String,
-};
-
-export class UserForm extends Component<Props, State> {
-  /**
-   * Initializes a new {@code ConfirmForm} instance.
-   *
-   * @param {Props} props - The React {@code Component} props to initialize
-   * the new {@code ConfirmForm} instance with.
-   */
+export class UserForm extends Component {
   constructor(props) {
     super(props);
 
@@ -52,12 +26,6 @@ export class UserForm extends Component<Props, State> {
     this.timerID = null;
   }
 
-  /**
-   * Render
-   *
-   * @private
-   * @returns {void}
-   */
   render() {
     const { invalidUserName, username } = this.state;
     let { className } = this.props;
@@ -137,13 +105,6 @@ export class UserForm extends Component<Props, State> {
     );
   }
 
-  /**
-   * Set state after changed verification code.
-   *
-   * @param {Event} event - The HTML Event which details the form submission.
-   * @private
-   * @returns {void}
-   */
   _changeInput = (event) => {
     const value = event.target.value;
 
@@ -166,13 +127,6 @@ export class UserForm extends Component<Props, State> {
     }, 300);
   };
 
-  /**
-   * Submit verification code.
-   *
-   * @param {Event} event - The HTML Event which details the form submission.
-   * @protected
-   * @returns {void}
-   */
   _submitUserForm = async (event) => {
     event.preventDefault();
 

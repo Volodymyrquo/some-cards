@@ -7,7 +7,6 @@ const initialState = {
 };
 
 const authReducer = (state = initialState, action) => {
-  debugger;
   switch (action.type) {
     case SET_USER_ACCESS_TOKEN:
       return {
@@ -24,11 +23,9 @@ export const setUserAccessToken = (access) => ({
   accessToken: access,
 });
 export const _signIn = ({ username, password }) => (dispatch) => {
-  debugger;
   fetchAuth({ username, password })
     .then((response) => response.json())
     .then((result) => {
-      debugger;
       const {
         access_token,
         meet_token,

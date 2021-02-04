@@ -1,26 +1,10 @@
 import React, { Component } from 'react';
-import './App.scss';
-import { FirstForm } from './components/FirstForm';
-import { ConfirmForm } from './components/ConfirmForm';
-import { UserForm } from './components/UserForm';
-import LoginForm from './components/LoginForm';
+import { FirstForm } from './FirstForm';
+import { ConfirmForm } from './ConfirmForm';
+import { UserForm } from './UserForm';
+import LoginForm from './LoginForm';
 
-/**
- * The type of the React {@code Component} props of {@link AuthPage}.
- */
-type Props = {
-  /**
-   * Additional CSS class names to add to the root of the authpage.
-   */
-  className: string,
-};
-
-/**
- * Represents the authentification page.
- *
- * @extends Component
- */
-export default class AuthPage extends Component<Props, State> {
+export default class AuthPage extends Component {
   static defaultProps = {
     className: 'authentification-form',
   };
