@@ -3,6 +3,7 @@ import { FirstForm } from './FirstForm';
 import { ConfirmForm } from './ConfirmForm';
 import { UserForm } from './UserForm';
 import LoginForm from './LoginForm';
+import './AuthPage.scss';
 
 export default class AuthPage extends Component {
   static defaultProps = {

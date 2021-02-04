@@ -1,0 +1,22 @@
+.header {
+  top: 0px;
+  background: #212121
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.15) 0.05%,
+      rgba(247, 247, 247, 0.15) 106.86%
+    );
+
+  grid-area: h;
+}
+
+li {
+  display: inline;
+  font-size: 16px;
+  margin-left: 16px;
+}
+
+a {
+  color: #d3d3d3;
+  text-decoration: none;
+}
