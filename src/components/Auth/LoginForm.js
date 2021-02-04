@@ -5,7 +5,7 @@ import logout from '../../images/sumra/icon-logout.svg';
 import { connect } from 'react-redux';
 import { _signIn } from '../../redux/auth-reducer';
 
-class LoginForm extends Component<Props, State> {
+class LoginForm extends Component {
   constructor(props) {
     super(props);
 
@@ -112,11 +112,6 @@ class LoginForm extends Component<Props, State> {
       });
   };
  */
-  /**
-   * Back to the first step, registration
-   * @private
-   * @returns {void}
-   */
   _goToRegistration = () => {
     this.props.onStep(1);
   };
