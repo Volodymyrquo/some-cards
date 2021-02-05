@@ -1,5 +1,7 @@
-import { fetchAuth } from '../common/functions';
+/* import { fetchAuth } from '../common/functions';
+ */
 
+import { authAPI } from '../api/api';
 const SET_USER_ACCESS_TOKEN = 'ulta-cards/auth/SET_USER_ACCESS_TOKEN';
 
 const initialState = {
@@ -22,19 +24,19 @@ export const setUserAccessToken = (access) => ({
   type: SET_USER_ACCESS_TOKEN,
   accessToken: access,
 });
-export const _signIn = ({ username, password }) => (dispatch) => {
-  fetchAuth({ username, password })
-    .then((response) => response.json())
-    .then((result) => {
-      const {
-        access_token,
-        meet_token,
-        expires_in,
-        refresh_token,
-        token_type,
-      } = result;
-      dispatch(setUserAccessToken(access_token));
-    });
+export const _signIn = ({ username, password }) => async (dispatch) => {
+  let response = await authAPI.fetchAuth({ username, password });
+
+  const {
+    access_token,
+    meet_token,
+    expires_in,
+    refresh_token,
+    token_type,
+  } = response.data;
+  dispatch(setUserAccessToken(access_token));
+
+  console.log('#####:status', response.status, response.statusText);
 };
 
 export default authReducer;

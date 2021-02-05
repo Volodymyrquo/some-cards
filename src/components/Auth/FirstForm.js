@@ -1,6 +1,6 @@
-import React, { Component, useState } from 'react';
+import React, { Component } from 'react';
 import { makeid, makeFetch, END_POINTS } from '../../common/functions';
-import { isMobile, isBrowser } from 'react-device-detect';
+import { isMobile } from 'react-device-detect';
 import 'react-phone-number-input/style.css';
 import PhoneInput from 'react-phone-number-input';
 import flags from 'react-phone-number-input/flags';
@@ -22,11 +22,13 @@ export class FirstForm extends Component {
         image: Telegram,
         href: 'https://t.me/sumrabot',
         hrefMobile: 'tg://resolve?domain=SumraBot',
+        id: 1,
       },
       {
         image: Viber,
         href: 'viber://pa?ChatURI=SumraBot',
         hrefMobile: 'viber://pa?ChatURI=SumraBot',
+        id: 2,
       },
       {
         image: Messanger,
@@ -37,11 +39,13 @@ export class FirstForm extends Component {
         image: WhatsApp,
         href: 'https://wa.me/SumraBot',
         hrefMobile: 'https://wa.me/SumraBot',
+        id: 3,
       },
       {
         image: Signal,
         href: '#',
         hrefMobile: '#',
+        id: 4,
       },
     ],
   };
@@ -57,7 +61,7 @@ export class FirstForm extends Component {
   render() {
     const { className, socialLinks, socialLinkWidth, targetBlank } = this.props;
 
-    const links = socialLinks.map((v, index) => {
+    const links = socialLinks.map((v) => {
       let href = '';
       if (isMobile) {
         href = v.hrefMobile;
@@ -66,7 +70,7 @@ export class FirstForm extends Component {
       }
       console.log(href);
       return (
-        <li key={index} onClick={this._goToVeryfycationCodePage}>
+        <li key={v.id} onClick={this._goToVeryfycationCodePage}>
           <a href={href} target={targetBlank}>
             <img src={v.image} width={socialLinkWidth} alt='social links' />
           </a>

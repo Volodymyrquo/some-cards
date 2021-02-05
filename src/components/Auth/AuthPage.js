@@ -24,9 +24,6 @@ export default class AuthPage extends Component {
     this._onSetVerificationCode = this._onSetVerificationCode.bind(this);
   }
 
-  /**
-   * Render
-   */
   render() {
     const { className } = this.props;
     const getForm = () => {
@@ -62,18 +59,10 @@ export default class AuthPage extends Component {
     );
   }
 
-  /**
-   *
-   * @param {number} value
-   */
   _goToStep(value) {
     this.setState({ currentStep: value });
   }
 
-  /**
-   *
-   * @param {string} code
-   */
   _onSetVerificationCode(code) {
     this.setState({ verificationCode: code.toUpperCase() });
   }
