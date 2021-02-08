@@ -10,8 +10,8 @@ class LoginForm extends Component {
     super(props);
 
     this.state = {
-      username: '',
-      password: '',
+      username: 'sumra_user',
+      password: 'sumra_user_1',
     };
   }
 
@@ -116,8 +116,5 @@ class LoginForm extends Component {
     this.props.onStep(1);
   };
 }
-const mapStateToProps = (state) => ({
-  accessToken: state.auth.accessToken,
-});
 
-export default connect(mapStateToProps, { _signIn })(LoginForm);
+export default connect(null, { _signIn })(LoginForm);

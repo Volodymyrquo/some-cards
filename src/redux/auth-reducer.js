@@ -35,7 +35,7 @@ export const _signIn = ({ username, password }) => async (dispatch) => {
     token_type,
   } = response.data;
   dispatch(setUserAccessToken(access_token));
-
+  localStorage.setItem('token', access_token);
   console.log('#####:status', response.status, response.statusText);
 };
 

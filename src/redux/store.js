@@ -1,6 +1,5 @@
 import { applyMiddleware, combineReducers, compose, createStore } from 'redux';
 import thunkMiddleware from 'redux-thunk';
-import { cardTypesAPI } from '../api/infinityAPI';
 import authReducer from './auth-reducer';
 import cardTypesReducer from './cardTypes-reducer';
 
@@ -13,7 +12,7 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const store = createStore(
   rootReducer,
-  composeEnhancers(compose(applyMiddleware(thunkMiddleware)))
+  composeEnhancers(applyMiddleware(thunkMiddleware))
 );
 
 export default store;

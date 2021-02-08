@@ -6,7 +6,7 @@ const CardsType = (props) => {
   return (
     <div>
       <h1>Hello from CardsType...</h1>
-      <button onClick={() => props.getCardTypesList(20, 1)}>
+      <button onClick={() => props.getCardTypesList()}>
         Get cards type list
       </button>
       {props.cardTypesList.map((item, index) => (

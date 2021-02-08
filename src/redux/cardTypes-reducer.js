@@ -23,8 +23,8 @@ export const setCardTypesList = (cardTypesList) => ({
   cardTypesList,
 });
 
-export const getCardTypesList = (value, page) => async (dispatch) => {
-  let response = await cardTypesAPI.getCardTypesList(value, page);
+export const getCardTypesList = () => async (dispatch) => {
+  let response = await cardTypesAPI.getCardTypesList();
   dispatch(setCardTypesList(response));
 };
 

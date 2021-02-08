@@ -6,7 +6,7 @@ export const END_POINTS = {
   SEND_CODE: 'auth/v1/send-code',
   VALIDATE: 'auth/v1/validate',
   REGISTRATION: 'auth/v1/registration',
-  AUTHENTIFICATION: 'auth/v1/meet/authenticate',
+  AUTHENTIFICATION: 'token/auth/v1/meet/authenticate',
 };
 
 /**

@@ -1,18 +1,20 @@
 import * as axios from 'axios';
 
-const token = '';
+const token = localStorage.token;
 const instance = axios.create({
-  baseURL: `https://api.sumra.net/infinity/1/v1/infinity`,
+  baseURL: `https:api.sumra.net/infinity/1/`,
   headers: {
+    'X-Requested-With': 'XMLHttpRequest',
     'Content-Type': 'application/json',
     Autorization: `Bearer ${token}`,
+    'Access-Control-Allow-Origin': '*',
   },
 });
 
 export const cardTypesAPI = {
-  getCardTypesList(value, page) {
+  getCardTypesList() {
     return instance
-      .get(`/cardtypes?limit=${value}&page=${page}`)
+      .get(`v1/infinity/cardtypes`)
       .then((response) => response.data);
   },
 };
