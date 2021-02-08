@@ -1,4 +1,5 @@
 .header {
+  display: flex;
   top: 0px;
   background: #212121
     linear-gradient(
@@ -7,7 +8,15 @@
       rgba(247, 247, 247, 0.15) 106.86%
     );
 
-  grid-area: h;
+  grid-area: header;
+}
+
+.logo {
+  text-align: center;
+  text-transform: uppercase;
+  color: #ddbe65;
+  width: 256px;
+  font-size: small;
 }
 
 .list {

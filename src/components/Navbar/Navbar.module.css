@@ -1,22 +1,12 @@
 .nav {
-  grid-area: n;
+  grid-area: navbar;
   background: #212121;
 }
 
-.logo {
-  width: 256px;
-  height: 56px;
-  left: 0px;
-  top: 0px;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.15) 0.05%,
-    rgba(247, 247, 247, 0.15) 106.86%
-  );
-}
-
 .list {
-  list-style: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 .item {
   font-size: 16px;
@@ -28,7 +18,18 @@
 }
 
 .item a {
+  display: block;
   color: #ffffff;
   text-decoration: none;
-  padding: 0;
+  padding: 8px 16px;
+  width: 256px;
+}
+
+.item a:hover {
+  background-color: #292929;
+  color: #dab75c;
+}
+
+.active {
+  background: linear-gradient(270deg, #dab75c 0%, #9d8754 100%);
 }

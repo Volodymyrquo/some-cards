@@ -3,9 +3,12 @@
 
 import { authAPI } from '../api/api';
 const SET_USER_ACCESS_TOKEN = 'ulta-cards/auth/SET_USER_ACCESS_TOKEN';
+const SET_USER_NAME = 'ulta-cards/auth/SET_USER_NAME';
 
 const initialState = {
   accessToken: null,
+  username: '',
+  invalidUserName: false,
 };
 
 const authReducer = (state = initialState, action) => {
@@ -15,6 +18,11 @@ const authReducer = (state = initialState, action) => {
         ...state,
         accessToken: action.accessToken,
       };
+    case SET_USER_NAME:
+      return {
+        ...state,
+        username: action.username,
+      };
     default:
       return state;
   }
@@ -23,6 +31,10 @@ const authReducer = (state = initialState, action) => {
 export const setUserAccessToken = (access) => ({
   type: SET_USER_ACCESS_TOKEN,
   accessToken: access,
+});
+export const setUserName = (username) => ({
+  type: SET_USER_NAME,
+  username,
 });
 export const _signIn = ({ username, password }) => async (dispatch) => {
   let response = await authAPI.fetchAuth({ username, password });
@@ -39,4 +51,24 @@ export const _signIn = ({ username, password }) => async (dispatch) => {
   console.log('#####:status', response.status, response.statusText);
 };
 
+/* export const _changeInput = (username) => async (dispatch) => {
+  dispatch(setUserName(username));
+
+  if (timer) {
+    clearTimeout(timer);
+  }
+
+  this.timerID = setTimeout(() => {
+    fetchValidateName(value)
+      .then((response) => {
+        if (response.status === 200) {
+          this.setState({ invalidUserName: false });
+        } else {
+          this.setState({ invalidUserName: true });
+        }
+      })
+      .catch(console.error);
+  }, 300);
+};
+ */
 export default authReducer;

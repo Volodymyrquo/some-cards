@@ -4,9 +4,8 @@ import s from './Navbar.module.css';
 const Navbar = () => {
   return (
     <div className={s.nav}>
-      <div className={s.logo}></div>
       <ul className={s.list}>
-        <li className={s.item}>
+        <li className={`${s.item} ${s.active}`}>
           <Link to='/dashboard'>Dashboard</Link>
         </li>
         <li className={s.item}>

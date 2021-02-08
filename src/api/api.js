@@ -25,6 +25,13 @@ export const authAPI = {
   },
 };
 
+const newInstatce = axios.create({
+  baseURL: `https://api.sumra.net`,
+});
+export const fetchValidateName = (name) => {
+  return newInstatce.get(`/auth/v1/validate?username=${name}`);
+};
+
 /* export const fetchAuth = ({ username, password }) => {
   return axios
     .request({
@@ -57,5 +64,4 @@ export const authAPI = {
       headers: {
         'Content-Type': 'application/json',
       },
-    });
- */
+    }); */

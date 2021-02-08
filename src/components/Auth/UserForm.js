@@ -4,7 +4,8 @@ import {
   fetchValidateName,
   makeFetch,
 } from '../../common/functions';
-import iconEnter from '../../images/sumra/icon-enter.svg';
+/* import { fetchValidateName } from '../../api/api';
+ */ import iconEnter from '../../images/sumra/icon-enter.svg';
 import personIcon from '../../images/sumra/icon-person.svg';
 import personOrange from '../../images/sumra/icon-person-orange.svg';
 import iconBlock from '../../images/sumra/icon-block.svg';
@@ -25,6 +26,18 @@ export class UserForm extends Component {
 
     this.timerID = null;
   }
+
+  /*   _changeInput = (event) => {
+    const username = event.target.value;
+    const timer = this.timerID;
+this._changeInput(username,timer)
+
+if (this.timerID) {
+  clearTimeout(this.timerID);
+
+}
+
+  } */
 
   render() {
     const { invalidUserName, username } = this.state;
