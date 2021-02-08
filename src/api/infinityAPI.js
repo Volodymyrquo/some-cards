@@ -1,11 +1,12 @@
 import * as axios from 'axios';
 
 const token = localStorage.token;
+
 const instance = axios.create({
   baseURL: `https:api.sumra.net/infinity/1/`,
   headers: {
     'X-Requested-With': 'XMLHttpRequest',
-    'Content-Type': 'application/json',
+    'Content-Type': 'application/x-www-form-urlencoded',
     Autorization: `Bearer ${token}`,
     'Access-Control-Allow-Origin': '*',
   },

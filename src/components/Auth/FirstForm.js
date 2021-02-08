@@ -61,16 +61,16 @@ export class FirstForm extends Component {
   render() {
     const { className, socialLinks, socialLinkWidth, targetBlank } = this.props;
 
-    const links = socialLinks.map((v) => {
+    const links = socialLinks.map((v, index) => {
       let href = '';
       if (isMobile) {
         href = v.hrefMobile;
       } else {
         href = v.href;
       }
-      console.log(href);
+
       return (
-        <li key={v.id} onClick={this._goToVeryfycationCodePage}>
+        <li key={index} onClick={this._goToVeryfycationCodePage}>
           <a href={href} target={targetBlank}>
             <img src={v.image} width={socialLinkWidth} alt='social links' />
           </a>

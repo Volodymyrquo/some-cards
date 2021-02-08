@@ -29,10 +29,10 @@ export const _signIn = ({ username, password }) => async (dispatch) => {
 
   const {
     access_token,
-    meet_token,
-    expires_in,
+    /*     expires_in,
     refresh_token,
     token_type,
+ */
   } = response.data;
   dispatch(setUserAccessToken(access_token));
   localStorage.setItem('token', access_token);
