@@ -2,7 +2,7 @@ import React, { Component, createRef } from 'react';
 import ReactCodeInput from 'react-verification-code-input';
 import logout from '../../images/sumra/icon-logout.svg';
 
-export class ConfirmForm extends Component<Props, State> {
+export class ConfirmForm extends Component {
   static defaultProps = {
     autoFocus: true,
     fieldWidth: 38,
@@ -22,7 +22,7 @@ export class ConfirmForm extends Component<Props, State> {
   }
 
   render() {
-    const { type, fieldWidth, fieldHeight, fields } = this.props;
+    const { type, fieldWidth, fieldHeight } = this.props;
 
     let { className } = this.props;
 
