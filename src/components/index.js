@@ -5,7 +5,6 @@ export { default as Contacts } from './Contacts';
 export { default as Currencies } from './Currencies';
 export { default as Dashboard } from './Dashboard';
 export { default as Home } from './Home';
-export { default as Operations } from './Operations';
 export { default as Requisites } from './Requisites';
 export { default as Tariffs } from './Tariffs';
 export { default as Users } from './Users';

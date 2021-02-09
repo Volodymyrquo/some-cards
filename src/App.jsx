@@ -11,7 +11,6 @@ import {
   Header,
   Home,
   Navbar,
-  Operations,
   Requisites,
   Tariffs,
   Users,
@@ -32,7 +31,6 @@ const App = () => {
           <Route path='/currencies' component={Currencies} />
           <Route path='/dashboard' component={Dashboard} />
           <Route path='/dashboard' component={Dashboard} />
-          <Route path='/operations' component={Operations} />
           <Route path='/requisites' component={Requisites} />
           <Route path='/tariffs' component={Tariffs} />
           <Route path='/users' component={Users} />

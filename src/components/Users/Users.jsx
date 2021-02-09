@@ -6,9 +6,9 @@ const Users = () => {
   return (
     <div className={s.main}>
       <div className={s.header}>
-        <div>Users</div>
-        <div className={s.button}>
-          <button>+ Add new user</button>
+        <div className={s.user}>Users</div>
+        <div>
+          <button className={s.button}>+ Add new user</button>
         </div>
       </div>
       <table className={s.table}>
