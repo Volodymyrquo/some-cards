@@ -16,6 +16,7 @@ import {
   Tariffs,
   Users,
 } from './components';
+import { ForCards, ForUsers, Types } from './components/Operations';
 
 const App = () => {
   return (
@@ -35,6 +36,10 @@ const App = () => {
           <Route path='/requisites' component={Requisites} />
           <Route path='/tariffs' component={Tariffs} />
           <Route path='/users' component={Users} />
+          <Route path='/types' component={Types} />
+          <Route path='/forusers' component={ForUsers} />
+          <Route path='/forcards' component={ForCards} />
+
           <Route path='/login' component={AuthPage} />
         </Switch>
       </div>

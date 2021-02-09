@@ -1,7 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
+import cn from 'classnames';
 import { NavLink } from 'react-router-dom';
 import s from './Navbar.module.css';
 const Navbar = () => {
+  const [isActive, setActive] = useState(false);
+
+  const handleClick = () => {
+    setActive(!isActive);
+  };
+
   return (
     <div className={s.nav}>
       <ul className={s.list}>
@@ -30,11 +37,29 @@ const Navbar = () => {
             Currencies
           </NavLink>
         </li>
-        <li className={s.item}>
-          <NavLink to='/operations' activeClassName={s.active}>
-            Operations
-          </NavLink>
-        </li>
+        <button className={cn(s.dropdownBtn)} onClick={handleClick}>
+          Operations
+          <i class='fa fa-caret-down'></i>
+        </button>
+        <div
+          className={cn(s.dropdownContainer)}
+          style={!isActive ? { display: 'none' } : null}>
+          <li className={s.item}>
+            <NavLink to='/types' activeClassName={s.active}>
+              Types
+            </NavLink>
+          </li>
+          <li className={s.item}>
+            <NavLink to='/forusers' activeClassName={s.active}>
+              For Users
+            </NavLink>
+          </li>
+          <li className={s.item}>
+            <NavLink to='/forcards' activeClassName={s.active}>
+              For Cards
+            </NavLink>
+          </li>
+        </div>
         <li className={s.item}>
           <NavLink to='/requisites' activeClassName={s.active}>
             Requisites
