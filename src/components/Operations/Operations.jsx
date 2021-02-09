@@ -1,9 +1,14 @@
 import React from 'react';
+import ForCards from './ForCards';
+import Types from './Types';
+import ForUsers from './ForUsers';
 
 const Operations = () => {
   return (
     <div>
-      <h1>Hello from Operations...</h1>
+      <Types />
+      <ForUsers />
+      <ForCards />
     </div>
   );
 };

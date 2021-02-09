@@ -10,8 +10,8 @@ class LoginForm extends Component {
     super(props);
 
     this.state = {
-      username: 'sumra_user',
-      password: 'sumra_user_1',
+      username: 'SumraEduard',
+      password: 'VvN1zRx16H',
     };
   }
 

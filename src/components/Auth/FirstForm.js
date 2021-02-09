@@ -22,13 +22,11 @@ export class FirstForm extends Component {
         image: Telegram,
         href: 'https://t.me/sumrabot',
         hrefMobile: 'tg://resolve?domain=SumraBot',
-        id: 1,
       },
       {
         image: Viber,
         href: 'viber://pa?ChatURI=SumraBot',
         hrefMobile: 'viber://pa?ChatURI=SumraBot',
-        id: 2,
       },
       {
         image: Messanger,
@@ -39,13 +37,11 @@ export class FirstForm extends Component {
         image: WhatsApp,
         href: 'https://wa.me/SumraBot',
         hrefMobile: 'https://wa.me/SumraBot',
-        id: 3,
       },
       {
         image: Signal,
         href: '#',
         hrefMobile: '#',
-        id: 4,
       },
     ],
   };

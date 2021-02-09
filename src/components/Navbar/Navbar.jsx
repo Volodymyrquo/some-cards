@@ -1,36 +1,54 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import s from './Navbar.module.css';
 const Navbar = () => {
   return (
     <div className={s.nav}>
       <ul className={s.list}>
-        <li className={`${s.item} ${s.active}`}>
-          <Link to='/dashboard'>Dashboard</Link>
+        <li className={s.item}>
+          <NavLink to='/dashboard' activeClassName={s.active}>
+            Dashboard
+          </NavLink>
         </li>
         <li className={s.item}>
-          <Link to='/cardstypes'>Cards Types</Link>
+          <NavLink to='/cardstypes' activeClassName={s.active}>
+            Cards Types
+          </NavLink>
         </li>
         <li className={s.item}>
-          <Link to='/cards'>Cards</Link>
+          <NavLink to='/cards' activeClassName={s.active}>
+            Cards
+          </NavLink>
+        </li>
+        <li className={s.item} activeClassName={s.item}>
+          <NavLink to='/contacts' activeClassName={s.active}>
+            Contacts
+          </NavLink>
         </li>
         <li className={s.item}>
-          <Link to='/contacts'>Contacts</Link>
+          <NavLink to='/currencies' activeClassName={s.active}>
+            Currencies
+          </NavLink>
         </li>
         <li className={s.item}>
-          <Link to='/currencies'>Currencies</Link>
+          <NavLink to='/operations' activeClassName={s.active}>
+            Operations
+          </NavLink>
         </li>
         <li className={s.item}>
-          <Link to='/operations'>Operations</Link>
+          <NavLink to='/requisites' activeClassName={s.active}>
+            Requisites
+          </NavLink>
         </li>
         <li className={s.item}>
-          <Link to='/requisites'>Requisites</Link>
+          <NavLink to='/tariffs' activeClassName={s.active}>
+            Tariffs
+          </NavLink>
         </li>
         <li className={s.item}>
-          <Link to='/tariffs'>Tariffs</Link>
-        </li>
-        <li className={s.item}>
-          <Link to='/users'>Users</Link>
+          <NavLink to='/users' activeClassName={s.active}>
+            Users
+          </NavLink>
         </li>
       </ul>
     </div>
