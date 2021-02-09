@@ -1,8 +1,10 @@
 import React from 'react';
 import s from './Users.module.css';
-import { usersList } from '../../common/usersData';
+/* import { usersList } from '../../common/usersData';
+ */ import { connect } from 'react-redux';
+import { getNewUser } from '../../redux/users-reducer';
 
-const Users = () => {
+const Users = ({ usersList }) => {
   return (
     <div className={s.main}>
       <div className={s.header}>
@@ -33,4 +35,8 @@ const Users = () => {
   );
 };
 
-export default Users;
+const mapStateToProps = (state) => ({
+  usersList: state.users.usersList,
+});
+
+export default connect(mapStateToProps, { getNewUser })(Users);
